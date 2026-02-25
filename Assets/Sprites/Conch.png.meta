@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1407f598fef6f424aaa823a858496b03
+guid: 11eb27074e74c034f9238a0f7edb7beb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 645411862609229670
-    second: Map_0
+      213: -3421836072799467748
+    second: Conch_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Map_0
+      name: Conch_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 4
-        width: 106
-        height: 73
+        width: 23
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 66775a46ba6f4f800800000000000000
-      internalID: 645411862609229670
+      spriteID: c178b21b8323380d0800000000000000
+      internalID: -3421836072799467748
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Map_0: 645411862609229670
+      Conch_0: -3421836072799467748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
