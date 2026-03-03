@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f7b789f507d287b42830014f06f10a42
+guid: 255fe4661b297a74e9383f958a9d8541
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7063449028545002870
-    second: ChellOpen_0
+      213: -4880196146473247
+    second: ShellOpen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,11 +100,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChellOpen_0
+      name: ShellOpen_0
       rect:
         serializedVersion: 2
         x: 1
-        y: 1
+        y: 0
         width: 20
         height: 21
       alignment: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a824f74488699fd90800000000000000
-      internalID: -7063449028545002870
+      spriteID: 1e6514acc79aeeff0800000000000000
+      internalID: -4880196146473247
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChellOpen_0: -7063449028545002870
+      ShellOpen_0: -4880196146473247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

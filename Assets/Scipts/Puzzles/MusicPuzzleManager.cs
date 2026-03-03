@@ -10,8 +10,18 @@ public class MusicPuzzleManager : MonoBehaviour
     public UnityEvent onPuzzleSolved;
     public UnityEvent onPuzzleFailed;
 
+    [Header("Sprite Change Settings")]
+    public SpriteRenderer targetSpriteRenderer; 
+    public Sprite newSprite; 
+
+    private bool puzzleCompleted = false; // bloqueia interações após sucesso
+
     public void RegisterNote(int noteID)
     {
+        // Se o puzzle já foi resolvido, não faz nada
+        if (puzzleCompleted)
+            return;
+
         playerSequence.Add(noteID);
 
         for (int i = 0; i < playerSequence.Count; i++)
@@ -29,14 +39,22 @@ public class MusicPuzzleManager : MonoBehaviour
         }
     }
 
-    void Success()
+    private void Success()
     {
         Debug.Log("Puzzle Complete!");
+        puzzleCompleted = true; // bloqueia futuras interações
+
+        // Muda o sprite do objeto
+        if (targetSpriteRenderer != null && newSprite != null)
+        {
+            targetSpriteRenderer.sprite = newSprite;
+        }
+
         onPuzzleSolved?.Invoke();
         playerSequence.Clear();
     }
 
-    void Fail()
+    private void Fail()
     {
         Debug.Log("Wrong sequence!");
         onPuzzleFailed?.Invoke();
