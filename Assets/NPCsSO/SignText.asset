@@ -15,7 +15,10 @@ MonoBehaviour:
   npcName: Mercado da Vila
   npcPortrait: {fileID: 3334738622998220081, guid: f292cfc3d24046b4faed19abb4a5dac8, type: 3}
   dialogLines:
-  - "Bem-vindo ao centro do com\xE9rcio da vila."
+    portuguese:
+    - A
+    english:
+    - B
   typingSpeed: 0.05
   voiceSound: {fileID: 0}
   voicePitch: 1

@@ -25,6 +25,7 @@ public static class SaveSystem
         File.WriteAllBytes(SavePath, encryptedData);
 
         Debug.Log("Jogo guardado em: " + SavePath);
+        // C:\Users\Dinis\AppData\LocalLow\DefaultCompany\2DGame
     }
 
     public static SaveData Load()

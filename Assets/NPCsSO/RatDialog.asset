@@ -15,7 +15,10 @@ MonoBehaviour:
   npcName: Rat
   npcPortrait: {fileID: 3290450029278852982, guid: 3bdb63b8d551c5446a1b0eb16b2a253b, type: 3}
   dialogLines:
-  - Aura
+    portuguese:
+    - A
+    english:
+    - B
   typingSpeed: 0.05
   voiceSound: {fileID: 0}
   voicePitch: 1

@@ -10,7 +10,7 @@ public class PlayerSwim : MonoBehaviour
     public float waterGravityScale = 0.2f;
 
     [Header("Breathing System")]
-    public float maxBreathTime = 10f; // Tempo máximo na água antes de começar a se afogar
+    public float maxBreathTime = 20f; // Tempo máximo na água antes de começar a se afogar
     public float currentBreathTime;
 
     [Header("Status")]
@@ -25,6 +25,7 @@ public class PlayerSwim : MonoBehaviour
     private bool isDrowning;
     private PlayerKnockBack knockback;
     public Collider2D headCollider;
+    private Animator animator;
 
     [Header("Input System")]
     [SerializeField] private InputActionReference swimAction;
@@ -37,6 +38,7 @@ public class PlayerSwim : MonoBehaviour
         playerHealth = GetComponent<PlayerHealth>();
         knockback = GetComponent<PlayerKnockBack>();
         originalGravity = rb.gravityScale;
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -65,6 +67,12 @@ public class PlayerSwim : MonoBehaviour
         );
 
         isSwimming = Mathf.Abs(xInput) > 0.1f || Mathf.Abs(yInput) > 0.1f;
+
+        if (animator != null)
+        {
+            animator.SetBool("IsSwimming", isSwimming);
+            animator.SetFloat("swimX", xInput);
+        }
     }
 
     private void HandleBreathing()
