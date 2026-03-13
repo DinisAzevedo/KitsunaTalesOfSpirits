@@ -2,16 +2,17 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.UI;
 
-public class SimpleRebindUI : MonoBehaviour
+public class RebindUI : MonoBehaviour
 {
     [Header("Input")]
     [SerializeField] private InputActionReference actionReference;
-    [SerializeField] private int bindingIndex; 
+    [SerializeField] private int bindingIndex;
     [Header("UI")]
-    [SerializeField] private TMP_Text actionLabel;
-    [SerializeField] private TMP_Text bindingText;
-    [SerializeField] private TMP_Text rebindPrompt;
+    [SerializeField] private Text actionLabel;
+    [SerializeField] private Text bindingText;
+    [SerializeField] private Text rebindPrompt;
 
     private InputActionRebindingExtensions.RebindingOperation rebindOperation;
 
@@ -50,7 +51,7 @@ public class SimpleRebindUI : MonoBehaviour
 
         rebindOperation = action
     .PerformInteractiveRebinding(bindingIndex)
-    .OnMatchWaitForAnother(0.1f) 
+    .OnMatchWaitForAnother(0.1f)
     .OnComplete(operation =>
     {
         operation.Dispose();
@@ -81,5 +82,5 @@ public class SimpleRebindUI : MonoBehaviour
         UpdateUI();
     }
 
-    
+
 }

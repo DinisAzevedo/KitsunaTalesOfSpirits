@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public ItemSO itemSO; 
-    private int quantity = 1; 
+    public ItemSO itemSO;
+    private int quantity = 1;
     private InventoryManager inventoryManager;
     private CoinDisplay coinDisplay;
     private AbilityUIManager abilityUIManager;
@@ -68,9 +68,9 @@ public class Item : MonoBehaviour
         if (inventoryManager != null)
         {
             int remaining = inventoryManager.AddItem(
-                itemSO.itemName, 
-                quantity, 
-                itemSO.sprite, 
+                itemSO.itemName,
+                quantity,
+                itemSO.sprite,
                 itemSO.itemDescription
             );
 

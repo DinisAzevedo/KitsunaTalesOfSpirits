@@ -8,7 +8,7 @@ public class MenuUI : MonoBehaviour
     void Start()
     {
         menuCanvas.SetActive(true);
-        
+
     }
 
     public void CloseMenu()

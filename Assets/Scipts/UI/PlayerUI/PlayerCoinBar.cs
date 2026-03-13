@@ -3,7 +3,7 @@ using TMPro;
 
 public class CoinDisplay : MonoBehaviour
 {
-    public TMP_Text coinsText; 
+    public TMP_Text coinsText;
     private int coins;
 
     void Awake()
@@ -11,7 +11,7 @@ public class CoinDisplay : MonoBehaviour
         if (coinsText == null)
         {
             GameObject go = GameObject.Find("CoinsQuantity");
-            if (go != null) 
+            if (go != null)
                 coinsText = go.GetComponent<TMP_Text>();
         }
         UpdateCoinBar();

@@ -9,7 +9,7 @@ public class BossLifeBar : MonoBehaviour
     public Sprite[] lifeSprites;    // sprites da barra
     
     [Header("Collider do Boss")]
-    public Collider2D bossCollider;  // Collider do boss (deve ser trigger)
+    public Collider2D bossCollider;  // Collider do boss 
     
     private int lastSpriteIndex = -1;
     private CanvasGroup canvasGroup;

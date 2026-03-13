@@ -3,7 +3,7 @@ using UnityEngine;
 [System.Obsolete]
 public class CampfireCheckpoint : MonoBehaviour, IInterectable
 {
-    private static CampfireCheckpoint activeCheckpoint = null; 
+    private static CampfireCheckpoint activeCheckpoint = null;
     private Animator animator;
     private bool isActive = false;
 
