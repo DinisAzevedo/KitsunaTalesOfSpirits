@@ -11,8 +11,13 @@ public class MusicPuzzleManager : MonoBehaviour
     public UnityEvent onPuzzleFailed;
 
     [Header("Sprite Change Settings")]
-    public SpriteRenderer targetSpriteRenderer; 
-    public Sprite newSprite; 
+    public SpriteRenderer targetSpriteRenderer;
+    public Sprite newSprite;
+
+    [Header("Drop Settings")]
+    public ItemSO rewardItem;
+    public int rewardQuantity = 1;
+    public Vector3 dropCoordinates;
 
     private bool puzzleCompleted = false; // bloqueia interações após sucesso
 
@@ -48,6 +53,12 @@ public class MusicPuzzleManager : MonoBehaviour
         if (targetSpriteRenderer != null && newSprite != null)
         {
             targetSpriteRenderer.sprite = newSprite;
+        }
+
+        // Dropa item de recompensa em coordenadas definidas
+        if (rewardItem != null)
+        {
+            LootHelper.SpawnLootItem(rewardItem, dropCoordinates, Mathf.Max(1, rewardQuantity));
         }
 
         onPuzzleSolved?.Invoke();
