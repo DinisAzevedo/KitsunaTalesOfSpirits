@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [System.Obsolete]
@@ -13,6 +14,10 @@ public class CampfireCheckpoint : MonoBehaviour, IInterectable
     public float soundRadius = 5f;       // Distância máxima para ouvir
 
     private Transform playerTransform;
+
+    [Header("UI")]
+    public GameObject checkpointPanel;
+    public float panelDuration = 2f;
 
     private void Awake()
     {
@@ -81,6 +86,7 @@ public class CampfireCheckpoint : MonoBehaviour, IInterectable
         {
             player.SetCheckpoint(transform.position);
             ActivateCheckpoint();
+            StartCoroutine(ShowCheckpointPanel());
 
             // Auto-save
             if (playerSave != null)
@@ -113,5 +119,15 @@ public class CampfireCheckpoint : MonoBehaviour, IInterectable
 
         if (fireAudioSource != null && fireAudioSource.isPlaying)
             fireAudioSource.Stop();
+    }
+
+    private IEnumerator ShowCheckpointPanel()
+    {
+        if (checkpointPanel != null)
+        {
+            checkpointPanel.SetActive(true);
+            yield return new WaitForSeconds(panelDuration);
+            checkpointPanel.SetActive(false);
+        }
     }
 }
